@@ -9,7 +9,7 @@ public final class Main extends Plugin {
 
     @Override
     public void onEnable() {
-        this.getLogger().log(Level.INFO,"Successfully started bungee-kick!");
+        this.getLogger().log(Level.INFO,"Successfully started Bungee-Kick!");
         getProxy().getPluginManager().registerCommand(this, new kick());
     }
 
