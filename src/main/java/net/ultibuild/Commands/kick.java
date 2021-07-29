@@ -20,12 +20,12 @@ public class kick extends Command {
                     ProxiedPlayer p = ProxyServer.getInstance().getPlayer(args[0]);
                     TextComponent text = new TextComponent("");
                     for(int i = 1; i < args.length; i++) {
-                        TextComponent reason = new TextComponent(args[i] + " ");
+                        TextComponent reason = new TextComponent(ChatColor.translateAlternateColorCodes('&',args[i] + " "));
                         text.addExtra(reason);
                     }
                     text.setColor(ChatColor.RED);
                     p.disconnect(text);
-                    System.out.println("Successfully kicked user " + p.getDisplayName() + " for reason: " + text.getText());
+                    System.out.println("Successfully kicked user " + p.getDisplayName() + " for reason: " + text.toPlainText());
                 } catch (Throwable ie) {
                     System.out.println("An error occured processing kick!");
                 }
